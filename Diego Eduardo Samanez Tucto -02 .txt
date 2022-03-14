@@ -166,10 +166,11 @@ if(digitalRead(E)==LOW){
    }
     //escritura en punto superior central de todo el rectangulo
     if(y-1>=0){ i=x; j=y-1; pixel.write(i,j,datosL[pos]); }
-    pos++;
-    
-//FIN DE ESCRITURA ALREDEDOR DEL Cursor x,y .
+    pos++; 
+    //FIN DE ESCRITURA ALREDEDOR DEL Cursor x,y .
  
+ 
+   //Hasta que se suelten los botones esperaremos 100ms mas y listo.
    while(digitalRead(F)==LOW || digitalRead(E)==LOW || digitalRead(A)==LOW || digitalRead(B)==LOW || digitalRead(C)==LOW || digitalRead(D)==LOW){}
    delay(100); //Evitar rebote
 }
